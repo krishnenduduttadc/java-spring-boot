@@ -1,0 +1,17 @@
+Login:
+
+POST /api/session/login?username=alice
+Response: User logged in: alice
+
+
+
+Get Current User (in the same session):
+
+GET /api/session/current
+Response: Current user: alice
+
+
+Logout:
+
+POST /api/session/logout
+Response: User logged out.

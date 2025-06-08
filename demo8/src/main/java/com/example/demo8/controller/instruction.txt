@@ -1,0 +1,16 @@
+
+Visit H2 Console: http://localhost:8080/h2-console
+(JDBC URL: jdbc:h2:mem:testdb)
+
+
+POST to http://localhost:8080/api/employees
+
+
+{
+  "name": "John Doe",
+  "department": "Engineering"
+}
+
+
+GET
+http://localhost:8080/api/employees

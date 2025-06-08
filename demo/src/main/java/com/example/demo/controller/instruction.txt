@@ -1,0 +1,25 @@
+xample Usage
+POST /api/users
+Req:-
+{
+  "name": "Alice",
+  "age": 25
+}
+
+
+GET /api/users
+Res:-
+[
+  {
+    "name": "Alice",
+    "age": 25
+  }
+]
+
+
+PUT /api/users/0
+Req:-
+{
+  "name": "Alice Updated",
+  "age": 26
+}

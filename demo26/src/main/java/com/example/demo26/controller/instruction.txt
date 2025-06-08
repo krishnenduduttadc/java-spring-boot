@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/users
+
+{
+  "name": "Krish",
+  "email": "krish@example.com"
+}
+
+
+📧 Admin notified: New user registered -> Krish

@@ -1,0 +1,23 @@
+http://localhost:8080/
+
+
+
+Oauth2:-
+go to:-
+https://github.com/settings/developers
+
+Application name :SpringBootDemo28
+
+Homepage URL: http://localhost:8080
+
+Authorization callback URL: http://localhost:8080/login/oauth2/code/github
+
+
+get from github
+Client ID: Ov23lioYZLNGb7JMTxWz
+Client Secret: e93ae23e61729d9f8472d91914c6c12b478a31e3
+
+Visit
+http://localhost:8080/
+Oauth user login
+http://localhost:8080/user  

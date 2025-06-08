@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session Demo</title>
+    <script>
+        // HttpSession functions
+        async function callEndpoint(url, outputId) {
+            const response = await fetch(url);
+            const text = await response.text();
+            document.getElementById(outputId).innerText = text;
+        }
+
+        // JWT functions
+        let jwtToken = null;
+
+        async function loginJwt() {
+            const username = document.getElementById("jwt-username").value;
+            if (!username) {
+                document.getElementById("jwt-output").innerText = "Enter a username";
+                return;
+            }
+
+            const res = await fetch('/jwt/login?username=' + username, { method: 'POST' });
+            jwtToken = await res.text();
+            document.getElementById('jwt-output').innerText = "JWT Token:\n" + jwtToken;
+        }
+
+        async function validateJwt() {
+            if (!jwtToken) {
+                document.getElementById('jwt-output').innerText = "Login first to get JWT";
+                return;
+            }
+            const res = await fetch('/jwt/validate', {
+                method: 'GET',
+                headers: { 'Authorization': 'Bearer ' + jwtToken }
+            });
+            const text = await res.text();
+            document.getElementById('jwt-output').innerText = text;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>🌐 Spring Boot Session Handling</h1>
+
+    <hr>
+    <h2>🔐 HttpSession (Stateful)</h2>
+    <button onclick="callEndpoint('/session/set', 'http-output')">Login (Set Session)</button>
+    <button onclick="callEndpoint('/session/get', 'http-output')">Get Session</button>
+    <button onclick="callEndpoint('/session/invalidate', 'http-output')">Logout</button>
+    <p id="http-output" style="font-weight: bold;"></p>
+
+    <hr>
+    <h2>🪪 JWT Session (Stateless)</h2>
+    <input type="text" id="jwt-username" placeholder="Enter Username" />
+    <button onclick="loginJwt()">Login with JWT</button>
+    <button onclick="validateJwt()">Validate JWT</button>
+    <p id="jwt-output" style="font-weight: bold; white-space: pre-wrap;"></p>
+
+
+    <hr>
+    <h2>🔓 OAuth2 Login</h2>
+    <a href="/oauth2/authorization/github">
+        <button>Login with GitHub</button>
+    </a>
+
+</body>
+
+</html>

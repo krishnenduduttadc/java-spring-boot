@@ -1,0 +1,5 @@
+GET
+http://localhost:8080/api/check-async
+
+GET
+http://localhost:8080/actuator/prometheus

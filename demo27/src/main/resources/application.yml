@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.example.demo27: DEBUG
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+resilience4j:
+  timelimiter:
+    instances:
+      flakyService:
+        timeoutDuration: 2s
+        cancelRunningFuture: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Demo</title>
+  <script>
+    let socket;
+
+    function connect() {
+      socket = new WebSocket("ws://localhost:8080/ws/messages");
+
+      socket.onopen = () => {
+        log("Connected");
+      };
+
+      socket.onmessage = (event) => {
+        log("Received: " + event.data);
+      };
+
+      socket.onclose = () => {
+        log("Disconnected");
+      };
+    }
+
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      socket.send(input.value);
+      input.value = "";
+    }
+
+    function log(msg) {
+      const log = document.getElementById("log");
+      log.innerHTML += msg + "<br>";
+    }
+  </script>
+</head>
+<body onload="connect()">
+  <h2>WebSocket Demo</h2>
+  <input id="messageInput" type="text" placeholder="Type message" />
+  <button onclick="sendMessage()">Send</button>
+  <div id="log" style="margin-top:20px; border:1px solid black; height:200px; overflow:auto;"></div>
+</body>
+</html>

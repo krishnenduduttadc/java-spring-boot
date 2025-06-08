@@ -1,0 +1,25 @@
+database part:-
+http://localhost:8080/h2-console --access database
+JDBC URL:
+Username: sa
+Password: (leave blank)
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+
+send request in postman:-
+
+POST http://localhost:8080/api/users
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+GET http://localhost:8080/api/users
+
+
+

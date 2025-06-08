@@ -1,0 +1,32 @@
+./mvnw spring-boot:run
+
+Index:
+0: GET/POST/PUT
+1: HttpSession
+2: Constructor Injection
+3: Logging AOP
+4: DB(H2) access
+5: Caching
+6: JDBC(H2)
+7: Service
+8: JDBC(H2) JPA
+9: With frontend
+10:Swagger UI
+11:Public/Private route
+12:Security with JWT
+13:Scheduling
+14:Web Client
+15:Hibernate with validation
+16:Actuator
+17:File upload
+18:API versioning
+19:Web Socket
+20:Rate Limit Filter(Bucket4j)
+21:Web Client for external API 
+22:Application Event
+23:Spring profile
+24:Enable Retry
+25:Modular monolith
+26:Custom Event and Event Listener
+27:Micrometer prometheus
+28: Spring HttpSession, JWT, OAuth using GitHub

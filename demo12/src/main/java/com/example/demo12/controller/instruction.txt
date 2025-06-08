@@ -1,0 +1,22 @@
+Step 1: Login and Get Token
+POST http://localhost:8080/auth/login
+Body → x-www-form-urlencoded:
+
+username = admin
+password = admin123
+If successful, you’ll get a plain JWT string in the response, like this:
+
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NjUwMDAwMCwiZXhwIjoxNjk2NTAzNjAwfQ.abc123def456ghi789...
+Copy that token.
+
+✅ Step 2: Call Secure API
+GET http://localhost:8080/api/hello
+Headers:
+
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiI...
+That’s it! If the token is valid, you’ll get:
+
+
+"Hello, JWT-secured user!"

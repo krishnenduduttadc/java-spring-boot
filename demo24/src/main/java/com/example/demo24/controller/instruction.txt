@@ -1,0 +1,13 @@
+GET
+
+http://localhost:8080/api/retry
+
+
+🔁 Trying to call external system...
+❌ Failed!
+🔁 Trying to call external system...
+❌ Failed!
+🔁 Trying to call external system...
+❌ Failed!
+🔁 Trying to call external system...
+✅ Success!

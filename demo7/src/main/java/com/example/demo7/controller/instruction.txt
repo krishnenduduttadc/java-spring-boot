@@ -1,0 +1,4 @@
+./mvnw clean install
+
+./mvnw test
+

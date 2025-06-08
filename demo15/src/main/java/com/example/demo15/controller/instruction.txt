@@ -1,0 +1,10 @@
+Try POST in Postman
+POST http://localhost:8080/api/users
+
+
+
+{
+  "name": "",
+  "email": "invalid",
+  "age": 10
+}

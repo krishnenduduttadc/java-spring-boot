@@ -1,0 +1,15 @@
+POST
+http://localhost:8080/api/users
+
+{ "name": "Alice" }
+
+GET
+http://localhost:8080/api/users
+
+
+POST
+http://localhost:8080/api/orders
+{ "item": "Laptop" }
+
+GET
+http://localhost:8080/api/orders

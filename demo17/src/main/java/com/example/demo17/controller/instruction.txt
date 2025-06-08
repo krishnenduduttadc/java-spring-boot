@@ -1,0 +1,3 @@
+POST: http://localhost:8080/api/files/upload
+
+Body → form-data → add a file key and choose a file.
