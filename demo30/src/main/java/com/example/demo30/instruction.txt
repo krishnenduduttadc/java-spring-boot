@@ -1,0 +1,9 @@
+
+mvn clean package
+
+docker build -t demo30-app .
+
+docker run -p 8080:8080 demo30-app
+
+http://localhost:8080
+
