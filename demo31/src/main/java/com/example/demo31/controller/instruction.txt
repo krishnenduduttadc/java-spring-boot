@@ -1,0 +1,22 @@
+Save a product (use Postman or curl)
+
+POST http://localhost:8080/products/save
+Content-Type: application/json
+{
+  "id": "p100",
+  "name": "iPhone 15",
+  "category": "smartphone",
+  "price": 999.99
+}
+
+➤ Get by ID:
+GET http://localhost:8080/products/p100
+
+
+➤ Get all:
+GET http://localhost:8080/products/all
+✅ Elasticsearch Index
+
+
+After saving, open:
+http://localhost:9200/products/_search

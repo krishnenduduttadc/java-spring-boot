@@ -1,0 +1,20 @@
+
+POST 
+http://localhost:8080/logs/create
+Content-Type: application/json
+
+{
+  "level": "INFO",
+  "message": "User logged in successfully"
+}
+
+
+
+View Data in Kibana
+Open: http://localhost:5601
+
+Go to Stack Management → Index Management
+go to:-
+app-logs
+Discover index
+See your log data

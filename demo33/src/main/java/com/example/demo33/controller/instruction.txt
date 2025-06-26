@@ -1,0 +1,11 @@
+curl -X POST http://localhost:8080/orders/place
+
+
+http://localhost:8080/actuator/prometheus
+
+
+Search for:
+
+app_orders_total
+app_last_order_value
+
