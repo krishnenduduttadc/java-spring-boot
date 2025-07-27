@@ -1,0 +1,33 @@
+Test Each Scope
+✅ Singleton (default)
+Restart app
+
+Hit http://localhost:8080/scope
+multiple times ➝ Same ID
+
+Shutdown and restart ➝ New ID
+
+🔄 Prototype
+Change:
+
+
+@Scope("prototype")
+Hit /scope ➝ always new ID
+
+Note: Prototype beans aren't managed fully by Spring (no auto-destroy)
+
+🌐 Request Scope
+Change:
+
+
+@Scope("request")
+Add spring-boot-starter-web dependency
+
+Each HTTP request gives a new ID
+
+👤 Session Scope
+Change:
+
+
+@Scope("session")
+New ID per browser session (store cookies enabled)

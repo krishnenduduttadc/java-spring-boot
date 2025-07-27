@@ -35,3 +35,7 @@ Index:
 31:ElasticSearch with springboot
 32:ElasticSearch+kibana with springboot 
 33:grafana with springboot
+34:annotations 
+35:bean lifecycle 
+36:bean scope-Singleton/Prototype/Request/Session
+37:ConditionalOnProperty Annotation 

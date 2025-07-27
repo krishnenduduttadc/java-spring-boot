@@ -1,0 +1,14 @@
+Start your Spring Boot app.
+
+Hit http://localhost:8080/test in browser or Postman.
+
+📋 Output in console:
+
+
+1️⃣ MyBean constructor called
+2️⃣ @PostConstruct: Bean is initialized
+✅ Doing some work in MyBean...
+📦 On shutdown (e.g., Ctrl+C in terminal):
+
+
+3️⃣ @PreDestroy: Bean is about to be destroyed

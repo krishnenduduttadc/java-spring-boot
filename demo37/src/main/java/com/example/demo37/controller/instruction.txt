@@ -1,0 +1,4 @@
+Test Behavior
+If app.service.env=prod → ProdService is active.
+
+If app.service.env=dev or property is missing → DevService is active (due to matchIfMissing=true).
