@@ -1,0 +1,5 @@
+http://localhost:8080/api
+
+Console output:
+🧹 [Filter] Request URL: /api
+🔐 [Interceptor] PreHandle: /api

@@ -1,0 +1,12 @@
+How to Test
+Run the app.
+
+Hit: http://localhost:8080/async
+
+Observe the console:
+
+
+Task started!
+🧵 Running async task on thread: task-1
+✅ Async task finished. (after ~3 sec)
+Notice that "Task started!" is returned immediately, and the long-running task finishes in the background.
