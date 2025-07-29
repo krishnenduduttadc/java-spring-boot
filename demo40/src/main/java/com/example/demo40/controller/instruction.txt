@@ -1,0 +1,44 @@
+GET /users/1 (should return 200 OK)
+GET http://localhost:8080/users/1
+Response:
+
+Status: 200 OK
+
+Body: User Found: ID 1
+
+❌ GET /users/99 (should return 404 Not Found)
+GET http://localhost:8080/users/99
+Response:
+
+Status: 404 Not Found
+
+Body: User not found
+
+🆕 POST /users (should return 201 Created)
+POST http://localhost:8080/users
+Content-Type: application/json
+Body: "Krishnendu"
+Response:
+
+Status: 201 Created
+
+Body: User created: Krishnendu
+
+🗑 DELETE /users/1 (should return 204 No Content)
+DELETE http://localhost:8080/users/1
+Response:
+
+Status: 204 No Content
+
+No body
+
+🔐 GET /users/custom-header
+GET http://localhost:8080/users/custom-header
+Response:
+
+Status: 200 OK
+
+Header: X-App-Version: 1.0.0
+
+Body: Header added!
+

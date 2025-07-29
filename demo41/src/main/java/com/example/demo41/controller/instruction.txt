@@ -1,0 +1,2 @@
+Visit: http://localhost:8080/users/1 → returns: User found: ID 1
+Visit: http://localhost:8080/users/5 → triggers UserNotFoundException

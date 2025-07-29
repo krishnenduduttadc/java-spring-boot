@@ -41,3 +41,5 @@ Index:
 37:ConditionalOnProperty Annotation 
 38:async annotation
 39:filters and interceptors
+40:responseentity and responsecodes
+41:ExceptionHandler ControllerAdvice
