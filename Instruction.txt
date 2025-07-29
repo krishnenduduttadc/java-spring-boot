@@ -43,3 +43,4 @@ Index:
 39:filters and interceptors
 40:responseentity and responsecodes
 41:ExceptionHandler ControllerAdvice
+42:Native query and criteria api
